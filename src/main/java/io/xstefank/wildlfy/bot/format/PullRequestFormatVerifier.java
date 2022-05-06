@@ -68,7 +68,7 @@ public class PullRequestFormatVerifier {
 
     private void updateFormatCommitStatus(GHPullRequest pullRequest, GHCommitState commitState, String description) throws IOException {
         String sha = pullRequest.getHead().getSha();
-
+        //for git status
         pullRequest.getRepository().createCommitStatus(sha, commitState, "", description, "Format");
     }
 }
